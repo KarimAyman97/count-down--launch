@@ -1,0 +1,9 @@
+
+
+.bg{
+    background: url('/images/pattern-hills.svg') no-repeat bottom right /
+    max(100vw, calc(1440 / 197 * 25vh)) 25%,
+    url('/images/bg-stars.svg'), hsl(235, 16%, 14%);
+    width: 100vw;
+    height: 100vh;
+}

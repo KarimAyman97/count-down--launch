@@ -1,0 +1,139 @@
+.card
+{
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 5rem;
+    color:hsl(345, 95%, 68%);
+    position: relative;
+    margin: auto;   
+    box-shadow: 0 10px hsl(234, 17%, 12%);
+    width: 150px;
+}
+
+.card-top,
+.card-bottom
+{
+    height: .75em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.card-top
+{
+    background-color: #2c2e3f;
+    display: flex;
+    justify-content: center;
+}
+
+.card-bottom
+{
+    background-color: #343650;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+
+
+.card-flip-top
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background-color: #2c2e3f;
+    height: .75em;
+    line-height: 1;
+    padding: .25em;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.start-flip-top
+{
+    transform-origin: bottom;
+    animation: flip-top 250ms ease-in forwards ;
+    opacity: 1;
+    
+}
+
+
+@keyframes flip-top {
+    100%{
+        transform: rotateX(90deg);
+    }
+}
+
+.card-flip-bottom
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: .75em;
+    line-height: 1;
+    bottom: 0;
+    padding: .25em;
+    overflow: hidden;   
+    display: flex;
+    align-items: flex-end;
+    background-color: #343650;
+    justify-content: center;
+}
+
+.start-flip-bottom
+{
+    transform-origin: top;
+    animation: flip-bottom 250ms ease-out 250ms forwards;
+    transform: rotateX(90deg) ;
+}
+
+@keyframes flip-bottom {
+    100%{
+        transform: rotateX(0deg);
+    }
+}
+
+
+
+@media only screen and (max-width: 700px) {
+    .card
+    {
+        font-size: 3.6rem;
+        width: 95px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .card
+    {
+        font-size: 2rem;
+        width: 80px;
+    }
+  }
+
+
+.circle-before
+{
+    position: absolute;
+    top: 46%;
+    left:-5%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(235, 16%, 14%);
+}
+
+.circle-after
+{
+    position: absolute;
+    top: 46%;
+    right: -5%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: hsl(235, 16%, 14%);
+}
+
