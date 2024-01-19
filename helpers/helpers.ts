@@ -1,6 +1,6 @@
 export function getLaunchDate() {
   const result = new Date();
-  result.setDate(result.getDate() + 14);
+  result.setDate(result.getDate() + 8);
   return result;
 }
 
